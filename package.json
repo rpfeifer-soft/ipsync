@@ -11,7 +11,10 @@
   "author": "René Pfeifer",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.0",
+    "curl": "^0.1.4",
     "dns": "^0.2.2",
-    "http": "0.0.1-security"
+    "http": "0.0.1-security",
+    "moment": "^2.29.1"
   }
 }
