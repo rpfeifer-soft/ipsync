@@ -1,18 +1,26 @@
 {
-  "name": "updatestratoip",
+  "name": "update-strato-ip",
   "version": "1.0.0",
   "description": "Updates the IP address of strato domain to current machine.",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "update": "node index.js",
+  "appid": "ipsync",
+  "title": "Update Strato-IP",
+  "dockerAccount": "rpfeifer/team-manager",
+  "prodServer": "iserver.local",
+  "prodBase": "Desktop/UpdateStratoIP",
+  "githubAccount": "https://github.com/rpfeifer-soft",
+ "scripts": {
+    "start": "node index.js",
+    "publish": "docker build . --file Dockerfile --no-cache --tag ${npm_package_dockerAccount}:${npm_package_appid} && docker push ${npm_package_dockerAccount}:${npm_package_appid}",
+    "scp": "scp -r ./secrets.js rpfeifer@${npm_package_prodServer}:${npm_package_prodBase}/secrets.json",
+    "ssh": "ssh ${npm_package_prodServer} -t \"cd ${npm_package_prodBase}; svn export --force ${npm_package_githubAccount}/${npm_package_name}/trunk/install .; bash --login; echo;\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "René Pfeifer",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.0",
-    "curl": "^0.1.4",
     "dns": "^0.2.2",
     "http": "0.0.1-security",
     "moment": "^2.29.1"

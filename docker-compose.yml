@@ -1,0 +1,11 @@
+version: "3.1"
+
+services:
+
+  server:
+    container_name: ipsync-app
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./secrets.js:/app/secrets.js
