@@ -1,0 +1,17 @@
+{
+  "name": "updatestratoip",
+  "version": "1.0.0",
+  "description": "Updates the IP address of strato domain to current machine.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "update": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "René Pfeifer",
+  "license": "MIT",
+  "dependencies": {
+    "dns": "^0.2.2",
+    "http": "0.0.1-security"
+  }
+}
