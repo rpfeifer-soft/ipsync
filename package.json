@@ -13,7 +13,7 @@
  "scripts": {
     "start": "node index.js",
     "publish": "docker build . --file Dockerfile --no-cache --tag ${npm_package_dockerAccount}:${npm_package_appid} && docker push ${npm_package_dockerAccount}:${npm_package_appid}",
-    "scp": "scp -r ./secrets.js rpfeifer@${npm_package_prodServer}:${npm_package_prodBase}/secrets.json",
+    "scp": "scp -r ./secrets.js rpfeifer@${npm_package_prodServer}:${npm_package_prodBase}/secrets.js",
     "ssh": "ssh ${npm_package_prodServer} -t \"cd ${npm_package_prodBase}; svn export --force ${npm_package_githubAccount}/${npm_package_name}/trunk/install .; bash --login; echo;\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
