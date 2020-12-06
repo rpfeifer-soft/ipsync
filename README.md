@@ -1,4 +1,4 @@
-# Update Strato-IP
+# IP-Sync
 
 Docker application to sync current public IP with a given Domain hosted by Strato!
 
