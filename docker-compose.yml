@@ -3,7 +3,7 @@ version: "3.1"
 services:
 
   server:
-    container_name: ipsync-app
+    container_name: ipsync
     build: 
       context: .
       dockerfile: ./Dockerfile
